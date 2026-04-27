@@ -26,11 +26,23 @@ To write a Python program to:
 ---
 
 ## 💻  Program
+```py
 
-Add Code Here
+if __name__ == '__main__':
+    n = int(input())
+    records = [[input(), float(input())] for _ in range(n)]
+    
+    unique_scores = sorted(set(score for _, score in records))
+    second_lowest = unique_scores[1]
+    
+    names = sorted(name for name, score in records if score == second_lowest)
+    print(*names, sep='\n')
+
+```
 
 ## Output
 
+<img width="413" height="395" alt="447832853-e4b94ff6-1324-4eaf-b24f-b7bc1295c173" src="https://github.com/user-attachments/assets/b020e491-9277-42ae-bdd7-558c1208e7dc" />
+
 ## Result
-
-
+Thus, the program has been successfully executed.
